@@ -1,0 +1,276 @@
+<html>
+<head>
+<title>Anotações HTML5</title>
+<link rel="shortcut icon" href="html.ico" type="image/x-icon">
+<style>
+body {
+	background-color: #cecece;
+}
+
+h1 {
+	text-align: center;
+	font-family: Georgia;
+	text-shadow: 2px 2px 5px white;
+}
+
+h2 {
+	font-family: Georgia;
+	font-size: medium;
+}
+
+p {
+	font-family: Arial;
+	text-align: justify;
+}
+
+a {
+	text-decoration:none;
+}
+
+ul li a {
+	color: rgba(68, 11, 23, 0.705);
+	font-size: 13pt;
+}
+
+select {
+	margin-left: 150px;
+}
+</style>
+</head>
+<body>	
+<section>
+<h1>Anotações do Curso de HTML5 da Fundação Bradesco!</h1>
+
+<ul>
+	<li><a href='#prot'>Protocolos</a></li>
+	<li><a href='#tags'>Tags Pré Formatadas</a></li>
+	<li><a href='#listas'>Listas<a></li>
+	<li><a href='#img'>Tipos de Imagens</a></li>
+	<li><a href='#link'>Criando Links</a></li>
+	<li><a href="#maps">Imagens Mapeadas</a></li>
+	<li><a href="#tab">Criando e Formatando Tabelas</a></li>
+	<li><a href="#form">Criando e formatando formulários</a></li>
+</ul>
+
+<a name='prot'>
+<h1>Protocolos</h1>
+
+<p>Protocolos são um conjunto de regras para a comunicação em rede. Eles determinam como computadores 
+se comunicam: como iniciar, como manter e como encerrar.</p>
+
+<p>HTTP - Hyper Text Transfer Protocol (HTTP) é o protocolo usado pelos servidores 
+web para trasnmitir documentos HTML pela internet.</p>
+
+<p>FTP - File Transfer Protocol (FTP) é o outro protocolo muito utilizado para transmitir
+arquivos, porém sua interface gráfica nao é tão agradável como o HTTP.</p>
+
+<p>TCP - Transfer Control Protocol (TCP) é um conjunto de protocolos para transmissão
+pela web, com função de verificar se os dados são transferidos de forma correta, na
+sequência apropriada e sem erros.</p>
+
+<p>IP - Internet Protocol (IP) é um protocolo de endereçamento, que fornece o endereço
+dos computadores na rede.</p>
+
+<p>URL (Universal Resource Locator) é o sistema de endereçamento usado pelos navegadores para localizar redes,
+computadores e arquivos na internet.</p>
+
+<a name='tags'>
+<h1>Tags Pré formatadas</h1>
+
+<p>Negrito - &ltb&gt  &lt/b&gt -- utilizado para destacar partes de um texto</br>
+Itálico - &lti&gt &lt/i&gt -- utilizado para destacar termos em outros idiomas ou citações</br>
+Sublinhado - &ltu&gt &lt/u&gt -- pouco utilizado para que os usuários não o confundam com links</p>
+
+<p>Para colocar linhas horizontais bastar pôr a tag &lthr&gt </p>
+<p>Para fazer comentário em HTML bastar pôr a tag &lt!--Texto--&gt</p>
+
+<p>Para aparecer o texto pré formatado tem que usar a tag &ltpre&gt &lt/pre&gt </p>
+
+<a name='listas'>
+<h1>Listas</h1>
+<p>&ltol&gt &lt/ol&gt - São para criar listas ordenadas (1, 2, 3...) ou (A, B, C...), use essa tag para formas listas que precisam de uma ordem, como receitas ou tutorias.
+	   E para cada item da lista temos a tag &ltli&gt &lt/li&gt</p>
+
+<p>&ltul&gt &lt/ul&gt - São para criar listas não ordenadas com pontinhos, quadradinhos ou circulos. Use essa tag para formar listas que não precisa de uma ordem, como
+		  lista de material escolar. E também é usado a tag &ltli&gt &lt/li&gt para cada item da lista.</p>
+
+<p>O atributo <i>type</i> serve para especificar o tipo de marcador que irá aparecer na lista.</p>
+
+<h2>LISTA ORDENADA</h2>           
+<ul type='square'>
+	<li>A- Para exibir letras maiúsculas</li>
+	<li>a - Para exibir letras minúsculas</li>
+	<li>I - Para exibir números romanos grandes</li>
+	<li>i - Para exibir números romanos pequenos.</li>
+</ul>
+Sintaxe: &ltol type="estilo do número/letra"&gt
+
+ <h2>LISTA NÃO ORDENADA</h2>
+<ul type='disc'>
+	<li>disc - Para exibir pontos</li>
+	<li>circle - Para exibir circulos</li>
+	<li>square - Para exibir quadrados</li>
+</ul>
+<p>Sintaxe: &ltul type="estilo do marcador"&gt </br>
+
+<b>É possível juntar as duas listas!!</b></p>
+
+
+<a name='img'>
+<h1>Tipos de Imagens</h1>
+<p>JPEG ou JPG - É o método <b>mais utilizado</b> para comprimir <b>imagens fotográficas</b>. Suporta até <b>16,8 milhões
+de cores</b> e não permite fundos transparentes.</p>
+<p>GIF - Seu formato suporta 8 bits por píxel, permitindo o uso de uma paleta de até <b>256 cores</b>. É  mais
+indicado para gráficos, ícones e imagens que não necessitam de muitas cores. Permite imagens com <b>fundo
+transparente</b>.</p>
+<p>PNG - É o subustituto do formato GIF. Assim como o JPG, permite <b>16,8 milhões de cores</b> e, como o GIF,
+permite <b>fundos transparentes</b></p>
+
+<p>Para inserir imagens em arquivos HTML temos que inserir a tag &ltimg&gt e o atributo src que 
+significa source(fonte)</br>
+Sintaxe: &ltimg src="pasta/nome imagem"&gt</p>
+
+<p>O atributo alt permite vincular um texto explicativo à imagem.</br>
+Sintaxe: &ltimg alt="Texto Explicativo"&gt</p>
+
+
+<a name='link'>
+<h1>Criando Links</h1>
+<p>a tag <i>anchor<i> &lta&gt &lt/a&gt é utilizada para criar links no HTML.</p>
+<p>Precisamos do atributo <i>href<i> para especificar a URL do documento linkado ou interligado</br>
+Sintaxe: &lta href="URL"&gt Texto Descritivo &lt/a&gt</p>
+<p>É possível linkar o site com o email.</p>
+<p>Sintaxe:</br>&lta href='mailto:lucas.chag0608@gmail.com'&gt Entre em contato &lt/a&gt</p>
+
+<p>Tem como criar um link para uma seção na mesma página</p>
+<p>Basta colocar a tag &lta name='nomeDaSeção'&gt na parte (seção) do site em que você deseja linkar.</br>
+Depois coloca a tag &lt a href='#nomeDaSeção'&gtTexto que será linkado&lt/a&gt</br>
+Como foi feito nessa anotação!</p>
+
+<h2>COLOCANDO LINK EM IMAGEM</h2>
+<p>Sintaxe:</br>
+&lta href="URL"&gt &ltimg src='localdaimg'&gt &lt/a&gt</p>
+
+<h2>MUDANDO A COR DOS LINKS</h2>
+<p>Podemos utilizar 3 elementos que modificam as cores, dentro da tag &ltbody&gt</p>
+
+<p>link - Especifica a cor dos links não acessados da página web.</br>
+vlink - Após ser acessado, o link apresentará a cor especificada por este atributo.</br>
+alink - Especifica a cor que o link deverá apresentar quando o mouse estiver sobre ele.</p>
+
+<a name='maps'>
+<h1>Imagens Mapeadas</h1>
+
+<p>Imagem mapeada é uma imagem dividida em <b>diferentes áreas</b> e cada área é interligada
+a um documento.</br> Uma imagem mapeada é diferente de um link em uma imagem.</p>
+
+<h2>Há dois tipos de imagens mapeadas</h2> 
+
+<p>Server-side (no servidor) - Na imagem mapeada server-side, você define um arquivo especial chamado 
+<b> arquivo de definição das coordenadas</b> com todos os detalhes da imagem mapeada e armazena
+este arquivo no servidor.</p>
+<p>Client-side (no cliente) - Na imagem mapeada client-side, você inclui todos os
+detalhes da imagem mapeada no <b>próprio documento.</b> </p>
+
+<a name="tab"">
+<h1>Criando e Formatando Tabelas</h1>
+<p>Para criar uma tabela é necessario três tags:</p>
+<p>&lttable&gt - &lt/table&gt: Reponsável por criar a tabela.</p>
+<p>&lttd&gt - &lt/td&gt: Responsável por criar as células/colunas.</p>
+<p>&lttr&gt: Responsável por criar as linhas.</p>
+
+<p>A tag &lttable&gt possui vários atributos que permitem, entre outros, controlar:</br>
+ - O alinhamento da tabela na página.</br>
+ - O alinhamento dos dados nas células.</br>
+ - A largura e cor da borda. <b>&lttable border='nº de pixels'&gt / &lttable bordercolor = 'cor' &gt</b> </br>
+ - As dimensões da tabela. <b>width - define largura / height - define altura</b>
+</p>
+
+<p>O atributo &ltcellspacing&gt especifica o espaço entre a borda da tabela e as células.</p>
+<p>O atributo &ltcellpadding&gt especifica o espaço entre os dados e a borda de uma célula.</p>
+
+<h2>Atributos da tag &lttd&gt</h2>
+
+<p>O atributo &ltvaling&gt serve para alinhamento vertical: top, bottom e center.</p>
+<p>O atributo &ltcolspan&gt é utilizado para mesclar uma célula em mais de uma coluna, de forma horizontal, e o valor é dado em números.</p>
+<p>O atributo &ltrowspan&gt é utilizado para mesclar uma célula em mais de uma coluna, de forma vertical, e o valor é dado em números.</p>
+
+<a name='form'>
+<h1>Criando e formatando formulários</h1>
+
+<p>Para criar um formulário em HTML tem que utilizar a tag &ltform&gt &lt/form&gt</p>
+
+<p>O primeiro atributo a usar na tag &ltform&gt é o action.</br>
+Ele vai especificar a URL do script que processará os dados do formulário.</p>
+
+<p>Os dados podem ser enviados para um email através da sintaxe</br>
+&ltform action="mailto:seuemail@endereco.com"&gt</br>
+Ou os dados podem ser processados por meio de um documento com uma determinada linguagem</br>
+&ltform action="processa.js"&gt</p>
+
+<p>O atributo &ltmethod&gt especifa a maneira de envio dos dados do formulário para o servidor <i>web</i> para que sejam processados.</br>
+Existem dois métodos que podem ser utilizados: <b>POST</b> e o <b>GET</b></p>
+
+<p>Post - É o mais utilizado, porque permite a transmissão de uma maior quantidade de dados ao servidor web</br>
+Get - O valor GET é utilizado para respostas únicas, como uma string de texto.</p>
+
+<p>A sintaxe completa da tag &ltform&gt fica assim:</br>
+&ltform action="URL" method="get" ou "post"&gt</p>
+
+<h2>Atributos da tag &ltinput&gt</h2>
+
+<p><b>type</b> = Especifica o tipo de controle a ser criado. Se nada for especificado, o padrão é "text"</br>
+<hr>	
+<b>value</b> = Especifica o valor inicial do controle. É opcional, com excessão de quando o TYPE for "radio" ou "checkbox".</br>
+<hr>
+<b>name</b> = Nomeia cada campo do formulário, para que o <i>script</i> possa manipular os dados.</br>
+<hr>
+<b>maxlenght</b> = Quando o valor de TYPE for "text" ou "password", eles estabelecem o número máximo de caracteres do campo. O valor padrão é ilimitado.</br>
+<hr>
+<b>src</b> = Quando o valor TYPE for "image", este atributo especifica a localização da imagem usada para decorar o botão enviar.</br>
+<hr>
+<b>checked</b> = Quando TYPE tem o valor "radio" ou "checkbox", este atributo faz com que um dos botões já esteja selecionado</br>
+<hr>
+<b>size</b> = Especifica o tamanho inicial do controle. A largura é dada em pixel, com excessão de quando o valor for "text" ou "password". </br>Nestes casos, o valor refere-se ao número de caracteres. </p>
+
+<h2>Os possiveis valores para o atributo <b>TYPE</b></h2>
+
+<p><b>image</b> = Criar um botão de enviar baseado em uma imagem especifica, cuja URL deve ser fornecida.</br>
+<b>file</b> = Criar um controle para seleção de arquivo. O valor de atributo deve ser configurado como o nome do arquivo.</br>
+<b>reset</b> = Cria um botão e reset, que limpa todos os campos.</br>
+<b>button</b> = Cria um botão para ser pressionado. O atributo deve ter o nome o nome do botão.</br>
+<b>submit</b> = Cria um botão de enviar.</br>
+<b>password</b> = Cria um campo de texto sem exibir o que está sendo digitado.</br>
+<b>radio</b> = Cria um botão de escolha única.</br>
+<b>text</b> = Cria um campo de texto de uma linha.</br>
+<b>checkbox</b> = Cria caixa de seleção.</br>
+<b>hidden</b> = Cria controle oculto.</p>
+<hr>
+
+<p>A tag &lttextarea&gt &lt/textarea&gt é utilizada para adicionar uma área de texto maior em um formulário, para receber várias linhas de textos.</p>
+<p>Os atributos dela são os "rows" que especifica o números de linhas(altura) e o "cols" que especifica o número de colunas(largura) da área de texto.</p>
+
+<p>A tag &ltselect&gt &lt/select&gt é utilizada para criar uma lista de opções ou um menu.</br>
+Para criar uma lista basta pôr a tag e dentro dela colocar cada &ltoption&gtItem1&lt/option&gt</br>
+</br>
+<select name="Exemplo" id="ex">
+	<option value="">Item 1</option>
+	<option value="">Item 2</option>
+	<option value="">Item 3</option>
+	<option value="">Item 4</option>
+</select></br>
+</br>
+</br>
+Para criar o menu tem que colocar o parâmetro "multiple" na tag &ltselect&gt </br>
+E dentro da tag select colocar cada &ltoption&gtItem1&lt/option&gt</p>
+<select multiple name="Exemplo" id="ex">
+	<option value="">Item 1</option>
+	<option value="">Item 2</option>
+	<option value="">Item 3</option>
+	<option value="">Item 4</option>
+</select></br>
+
+</section>
+
+</body>
+</html>
